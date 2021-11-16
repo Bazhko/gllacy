@@ -1,0 +1,243 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  background-color: #feafc3;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.main-page {
+  flex-grow: 1;
+}
+
+.page-wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  border-radius: 26px;
+}
+
+/* Header */
+
+.main-nav {
+  display: flex;
+  min-width: 1170px;
+  margin-top: 24px;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.header-logo {
+  margin-right: 16px;
+}
+
+.main-nav_list {
+  display: flex;
+  margin: 0 auto 5px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav_list_item {
+  height: 32px;
+  margin-right: 1px;
+}
+
+.main-nav_list_item_link {
+  height: 100%;
+  padding: 0 16px;
+  line-height: 32px;
+}
+
+.main-nav_list_item_link:hover,
+.main-nav_list_item_link:focus,
+.main-nav_buttons_list_link:hover,
+.main-nav_buttons_list_link:focus {
+  background-color: rgba(252,252,252,0.5);
+}
+
+.main-nav_list_item_link:focus,
+.main-nav_buttons_list_link:focus {
+  outline: 2px solid #2d3440;
+  outline-offset: 0;
+}
+
+.main-nav_list_item_link:active,
+.main-nav_buttons_list_link:active {
+  background-color: rgba(252,252,252,1);
+}
+
+.main-nav_phone {
+  margin: 0 18px 5px 0;
+  font-weight: 700;
+}
+
+.main-nav_buttons_list {
+  display: flex;
+  margin: 0 0 5px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.main-nav_buttons_list_item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.main-nav_buttons_list_link {
+  position: relative;
+  display: block;
+  height: 32px;
+  box-sizing: border-box;
+  line-height: 32px;
+  text-align: center;
+  background-color: rgba(252, 252, 252, 0.3);
+}
+
+.main-nav_buttons_list_link svg {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  right: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.main-nav_buttons_list_link_search {
+  width: 32px;
+  background-image: url(../img/icon_search.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.main-nav_buttons_list_link_user-cabinet {
+  min-width: 92px;
+}
+
+.main-nav_buttons_list_link_cart {
+  min-width: 97px;
+}
+
+.main-nav_buttons_list_link_user-cabinet,
+.main-nav_buttons_list_link_cart {
+  padding-left: 23px;
+}
+
+/* Main */
+
+
+.main-page_promo-slider {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.main-page_promo-slider_slide {
+  display: grid;
+  padding-left: 70px;
+  min-width: 1170px;
+}
+
+.main-page_promo-slider_slide_heading {
+  width: 470px;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 46px;
+}
+
+.main-page_promo-slider_slide_text {
+  width: 414px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.main-page_promo-slider_slide_image-wrap {
+  position: relative;
+  width: 350px;
+  height: 507px;
+}
+
+.main-page_promo-slider_slide_image_round-background {
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 156px);
+  z-index: 1;
+  width: 312px;
+  height: 312px;
+  background-color: #ffcbd8;
+  border-radius: 50%;
+}
+
+.main-page_promo-slider_slide_image {
+  position: relative;
+  top: 0;
+  left: calc(50% - 156px);
+  z-index: 2;
+
+}
+
+.main-page_promo-slider_slide_image_btn {
+  position: absolute;
+  top: calc(50% - 16px);
+  z-index: 3;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #fcfcfc;
+  background-color: rgba(252,252,252,0.3);
+}
+
+.main-page_promo-slider_slide_image_btn_prevs {
+  left: 0;
+}
+
+.main-page_promo-slider_slide_image_btn_next {
+  right: 0;
+}
+
+.arrow_next {
+  transform: rotate(180deg);
+}
+
+.main-page_promo-slider_slide_order-button {
+  min-width: 139px;
+  min-height: 44px;
+  margin: 4px auto 4px 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  outline: 4px solid rgba(252,252,252,0.4);
+  border: none;
+  background-color: #fcfcfc;
+  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+}
