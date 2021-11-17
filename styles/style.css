@@ -33,10 +33,25 @@ body {
   margin: 0 auto;
 }
 
-.button {
+.button,
+.button-white {
   display: block;
   text-align: center;
   border-radius: 26px;
+}
+
+.button-white {
+  display: inline-block;
+  min-height: 44px;
+  margin: 4px auto 4px 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+  outline: 4px solid rgba(252,252,252,0.4);
+  border: none;
+  background-color: #fcfcfc;
+  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 /* Header */
@@ -153,6 +168,11 @@ body {
 
 /* Main */
 
+.main-page_promo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 .main-page_promo-slider {
   display: flex;
@@ -240,4 +260,275 @@ body {
   border: none;
   background-color: #fcfcfc;
   box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.main-page_promo_panigation_item {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(252, 252, 252, 0.3);
+  cursor: pointer;
+}
+
+.main-page_promo_panigation_item:not(:last-child) {
+  margin-right: 8px;
+}
+
+#slide-1:checked ~ .main-page_promo_panigation_item_first,
+#slide-2:checked ~ .main-page_promo_panigation_item_second,
+#slide-3:checked ~ .main-page_promo_panigation_item_third {
+  background-color: rgba(252, 252, 252, 1);
+}
+
+.social_list {
+  display: flex;
+  list-style: none;
+}
+
+.social_list_item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.social_list_item_link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  outline: 2px solid rgba(252, 252, 252, 0.2);
+  border-radius: 50% ;
+}
+
+.social_icon path {
+  fill: rgba(252, 252, 252, 1);
+}
+
+/* gifts for order  */
+
+.main-page_order-gift {
+  margin-bottom: 81px;
+}
+
+.main-page_order-gift_heading {
+  min-width: 443px;
+  margin-bottom: 55px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+}
+
+.main-page_order-gift_cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-page_order-gift_card {
+  width: 570px;
+  min-height: 268px;
+  padding: 41px 40px 36px 36px;
+  box-sizing: border-box;
+  background-color: #FF7799;
+  border-radius: 16px;
+}
+
+.main-page_order-gift_card_strawberry {
+  background-image: url("/img/strawberry.png");
+  background-repeat: no-repeat;
+  background-position: 96% 100%;
+}
+
+.main-page_order-gift_card_marshmallow {
+  background-image: url("/img/marshmallow.png");
+  background-repeat: no-repeat;
+  background-position: 98% 100%;
+}
+
+.main-page_order-gift_card_heading {
+  margin: 0 0 0 4px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.main-page_order-gift_card_strawberry .main-page_order-gift_card_heading,
+.main-page_order-gift_card_strawberry .main-page_order-gift_card_text {
+  max-width: 325px;
+}
+
+.main-page_order-gift_card_marshmallow .main-page_order-gift_card_heading,
+.main-page_order-gift_card_marshmallow .main-page_order-gift_card_text {
+  max-width: 300px;
+}
+
+.main-page_order-gift_card_text {
+  margin: 15px 0 28px 4px;
+}
+
+.main-page_order-gift_card_button {
+  min-width: 176px;
+  line-height: 44px;
+}
+
+/* Popular */
+
+.main-page_popular {
+  margin-bottom: 80px;
+}
+
+.main-page_popular_heading {
+  margin: 0 0 55px 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+}
+
+.main-page_popular_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.main-page_popular_list_item {
+  position: relative;
+  display: flex;
+  padding-top: 51px;
+  flex-direction: column;
+  width: 270px;
+}
+
+.main-page_popular_list_item_transporent {
+  width: 100%;
+  height: 51px;
+}
+
+.main-page_popular_list_item_content-wrapper {
+  height: 100%;
+  padding: 133px 40px 24px 40px;
+  background-color: #fcfcfc;
+  border-radius: 8px;
+}
+
+.main-page_popular_list_item_image {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 84px);
+  width: 168px;
+  height: 168px;
+}
+
+.main-page_popular_list_item_image_strawberry {
+  background: url("/img/strawberry-bg.png") no-repeat;
+}
+
+.main-page_popular_list_item_image_pistachio {
+  background: url("/img/pistachio-bg.png") no-repeat;
+}
+
+.main-page_popular_list_item_image_blackberry {
+  background: url("/img/blackberry-bg.png") no-repeat;
+}
+
+.main-page_popular_list_item_image_bublegum {
+  background: url("/img/bublegum-bg.png") no-repeat;
+}
+
+.main-page_popular_list_item_heading {
+  margin: 0 0 8px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.main-page_popular_list_item_desc {
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.main-page_popular_list_item_price {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.main-page_popular_list_item_order-btn {
+  width: 32px;
+  height: 32px;
+  float: right;
+  padding-top: 5px;
+  border-radius: 50%;
+  border: none;
+  background-color: #FF2F64;
+}
+
+/* About */
+
+.main-page_about {
+  padding: 24px;
+  background: url("/img/waffle-bg.jpg");
+  border-radius: 16px;
+}
+
+.main-page_about-wrapper {
+  padding: 57px 10px 10px 10px;
+  padding-bottom: 1px;
+  border-radius: 16px;
+  background-color: #fcfcfc;
+}
+
+.main-page_about_heading {
+  margin: 0 0 39px 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+}
+
+.main-page_about_facts_list {
+  display: grid;
+  grid-template-columns: repeat(2, 506px);
+  column-gap: 30px;
+  row-gap: 8px;
+  margin: 0;
+  padding: 0 0 39px 30px;
+  list-style: none;
+}
+
+.main-page_about_facts_list_item {
+  position: relative;
+  margin-left: 64px;
+}
+
+.main-page_about_facts_list_item::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -64px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #2d3440;
+}
+
+.main-page_about_facts_list_item_factory::before {
+  background: url("/img/icon_ice-cream.svg") no-repeat 50% 50%;
+}
+
+.main-page_about_facts_list_item_purchase::before {
+  background: url("/img/icon_cow.svg") no-repeat 50% 50%;
+}
+
+.main-page_about_facts_list_item_ingredients::before {
+  background: url("/img/icon_leaf.svg") no-repeat 50% 50%;
+}
+
+.main-page_about_facts_list_item_delivery::before {
+  background: url("/img/icon_thermometer.svg") no-repeat 50% 50%;
 }
